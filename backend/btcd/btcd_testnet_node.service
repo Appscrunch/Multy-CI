@@ -1,0 +1,11 @@
+[Unit]
+Description=Bitcoin node (bcd)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/go/bin/btcd --configfile=/data2/.btcd/btcd_testnet.conf
+ExecReload=/root/go/bin/btcd --configfile=/data2/.btcd/btcd_testnet.conf
+
+[Install]
+WantedBy=multi-user.target

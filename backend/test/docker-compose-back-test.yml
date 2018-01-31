@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  multy-back:
+    image:  multyio/backend:latest
+    command: ["make", "all"]
+    env_file: .env
+    volumes:
+        - "${BACKEND_LOGS}:/go/src/github.com/Appscrunch/Multy-back/cmd/logs" 
+        - "${BACKEND_CONF}:/go/src/github.com/Appscrunch/Multy-back/cmd/multy.config"
+        - "${BTCD_CERT}:/go/src/github.com/Appscrunch/Multy-back/cmd/rpc.cert"
+    ports:
+      - "6678:6678"
+      - "6680:6680"
+      
