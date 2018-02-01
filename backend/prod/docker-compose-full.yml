@@ -64,7 +64,7 @@ services:
       - "4171:4171"
     command: nsqadmin --lookupd-http-address=nsqlookup:4161
   
-    btcd-testnet:
+  btcd-testnet:
     image: multyio/btcd-testnet:1.0.0
     env_file: .env
     volumes:
