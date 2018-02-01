@@ -16,7 +16,7 @@ services:
       - nsqlookup
       - nsqadmin
       - mongodb
-      # - btcd-testnet
+      - btcd-testnet
       
   mongodb:
     container_name: "mongodb"
