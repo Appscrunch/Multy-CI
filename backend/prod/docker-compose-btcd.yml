@@ -6,8 +6,6 @@ services:
     volumes:
      - "${BTCD}:/root/.btcd"
      - "${BTCCTL}:/root/.btcctl"
-     - "${BTCD_CERT}:/root/rpc.cert"
-     - "${BTCD_KEY}:/root/rpc.key"
     ports:
      - 1334:1334
      - 18334:18334
